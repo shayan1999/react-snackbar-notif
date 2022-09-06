@@ -1,0 +1,185 @@
+.snackbar-container{
+    position: fixed;
+    z-index: 1000;
+    padding: 0.625rem 1rem;
+    border-radius: 0.75rem;
+    border: transparent;
+    color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 30%;
+}
+
+.snackbar-rtl{
+    direction: rtl;
+}
+
+.snackbar-ltr{
+    direction: ltr;
+}
+
+.snackbar-left{
+    left: 10px;
+}
+
+.snackbar-right{
+    right: 10px;
+}
+
+/* -------------------------------------------- */
+
+.snackbar-bottom{
+    bottom: 1rem;
+}
+
+.snackbar-bottom.snackbar-open{
+    animation: fadeinBottom 0.5s;
+}
+
+.snackbar-bottom.snackbar-close{
+    animation: fadeoutBottom 0.5s;
+}
+
+/* ------------------------------------------- */
+
+.snackbar-top{
+    top: 1rem;
+}
+
+.snackbar-top.snackbar-open{
+    animation: fadeinTop 0.5s;
+}
+
+.snackbar-top.snackbar-close{
+    animation: fadeoutTop 0.5s;
+}
+
+/* --------------------------------------------- */
+
+.snackbar-center-horizontal{
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* -------------------------------------------- */
+
+.snackbar-center-vertical{
+    top: 50%;
+}
+
+.snackbar-center-vertical.snackbar-open{
+    animation: fadeinCenter 0.5s;
+}
+
+.snackbar-center-vertical.snackbar-close{
+    animation: fadeoutCenter 0.5s;
+}
+
+/* -------------------------------------------- */
+
+.ms-2{
+    margin-left: 8px;
+}
+
+.mr-2{
+    margin-right: 8px;
+}
+
+.error-snack{
+    background-color: #dc3545;
+}
+
+.success-snack{
+    background-color: #28a745;
+}
+
+.warn-snack{
+    background-color: #ffc107;
+}
+
+.snackbar-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 1.75rem;
+    width: 1.75rem;
+    text-align: center;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.snackbar-button:hover{
+    opacity: 0.5;
+    background-color: gray;
+}
+
+
+@keyframes fadeoutBottom{
+    from {
+      bottom: 1rem;
+      opacity: 1;
+    }
+    to {
+      bottom: 0;
+      opacity: 0;
+    }
+}
+
+@keyframes fadeinBottom{
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 1rem;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeinTop{
+    from{
+        top: 0;
+        opacity: 0;
+    }
+    to{
+        top: 1rem;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeoutTop {
+    from{
+        top: 1rem;
+        opacity: 1;
+    }
+    to{
+        top: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeinCenter {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeoutCenter {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
