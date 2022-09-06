@@ -1,6 +1,6 @@
 {
   "name": "react-snackbar-notif",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "a simple react component with snack bars alert you when you call them with our hooks",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
